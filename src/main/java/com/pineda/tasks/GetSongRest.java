@@ -9,18 +9,18 @@ import java.util.List;
 
 public class GetSongRest implements Task {
 
-    private List<String> id;
+    private final String id;
 
-    public GetSongRest(List<String> id){
+    public GetSongRest(String id){
         this.id = id;
     }
 
-    public static GetSongRest withId(List<String> id) {
+    public static GetSongRest withId(String id) {
         return Tasks.instrumented(GetSongRest.class, id);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(ConsumeService.withGet(id.get(1)));
+        actor.attemptsTo(ConsumeService.withGet(id));
     }
 }

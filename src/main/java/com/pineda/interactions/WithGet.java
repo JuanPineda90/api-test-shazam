@@ -1,6 +1,5 @@
 package com.pineda.interactions;
 
-import com.pineda.tasks.GetSongRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.rest.interactions.Get;
@@ -10,10 +9,13 @@ import static com.pineda.utils.enums.HadersService.RAPIDAPI_KEY;
 import static com.pineda.utils.enums.RestServices.GET_SONG;
 
 public class WithGet implements Interaction {
-    private String id;
+
+    private final String id;
+
     public WithGet(String id) {
         this.id = id;
     }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

@@ -4,20 +4,20 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
 import static net.serenitybdd.rest.SerenityRest.lastResponse;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
 
 public class ResponseNameSong implements Question<String> {
 
-    public ResponseNameSong() {
+    private final String fieldName;
+
+    public ResponseNameSong(String fieldName) {
+        this.fieldName = fieldName;
     }
 
-    public static ResponseNameSong is() {
-        return new ResponseNameSong();
+    public static ResponseNameSong with(String fieldName) {
+        return new ResponseNameSong(fieldName);
     }
     @Override
     public String answeredBy(Actor actor) {
-        String response = lastResponse().jsonPath().getString("data[0].attributes.name");
-        return response;
+        return lastResponse().jsonPath().getString("data[0].attributes."+fieldName);
     }
 }

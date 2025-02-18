@@ -5,26 +5,27 @@ import com.pineda.questions.ResponseNameSong;
 import com.pineda.tasks.GetSongRest;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import java.util.List;
-
-import static com.pineda.utils.Constant.NAME_SONG;
+import static com.pineda.utils.Constant.*;
 import static org.hamcrest.Matchers.*;
-
-import static com.pineda.utils.Constant.VALUE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class StepDefinitionGetSongDetailsById {
 
-    @When("a song is consulted")
-    public void a_song_is_consulted(List<String> id) {
-        theActorInTheSpotlight().attemptsTo(GetSongRest.withId(id));
+    @When("realizo una solicitud GET para obtener detalles de la canción con id {string}")
+    public void realizo_una_solicitud_get_para_obtener_detalles_de_la_cancion_con_id(String songId) {
+        theActorInTheSpotlight().attemptsTo(GetSongRest.withId(songId));
     }
 
-    @Then("I can see the song information")
-    public void i_can_see_the_song_information() {
-        theActorInTheSpotlight().should(seeThat("The song name is" , ResponseNameSong.is(), equalTo(NAME_SONG)));
-        theActorInTheSpotlight().should(seeThat("The response code is" , LastResponseStatusCode.is(), equalTo(VALUE)));
+    @Then("el código de estado de la respuesta debe ser 200")
+    public void el_codigo_de_estado_de_la_respuesta_debe_ser_200(){
+        theActorInTheSpotlight().should(seeThat("El código de respuest es" , LastResponseStatusCode.is(), equalTo(VALUE_200)));
+    }
+
+    @Then("el cuerpo de la respuesta debe contener el campo {string} con el valor {string}")
+    public void el_cuerpo_de_la_respuesta_debe_contener_el_campo_name_con_el_valor(String fieldName, String expectedTitle) {
+        System.out.println(fieldName + " " + expectedTitle);
+        theActorInTheSpotlight().should(seeThat("El nombre de la canción es" , ResponseNameSong.with(fieldName), equalTo(expectedTitle)));
     }
 
 }
