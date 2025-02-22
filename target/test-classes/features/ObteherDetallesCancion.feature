@@ -17,3 +17,12 @@ Feature: Validar la respuesta al obtener detalles de canciones
       | songId       | expectedTitle                                |
       | 1217912247   | Let Me Out (feat. Mavis Staples & Pusha T)   |
       | 1217912248   | Interlude: Penthouse                         |
+
+  Scenario Outline: El tiempo de respuesta es menor a 2000ms
+    When realizo una solicitud GET para obtener detalles de la canción con id "<songId>"
+    Then el tiempo de respuesta debe ser menor a 2000ms
+
+    Examples:
+      | songId       |
+      | 1217912247   |
+      | 1217912248   |

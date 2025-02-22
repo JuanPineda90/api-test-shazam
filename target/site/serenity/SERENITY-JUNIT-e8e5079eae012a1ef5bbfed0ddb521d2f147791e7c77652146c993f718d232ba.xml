@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="Validar la respuesta al obtener detalles de canciones" skipped="0" tests="2" time="5.2" timestamp="2025-02-17 07:55:56"><testcase name="El cuerpo de la respuesta contiene los detalles esperados de la canción"><failure message="&#13;&#10;Expected: &quot;Let Me Out (feat. Mavis Staples &amp; Pusha T)&quot;&#13;&#10;     but: was null" type="java.lang.AssertionError">&#13;
-Expected: "Let Me Out (feat. Mavis Staples &amp; Pusha T)"&#13;
-     but: was null</failure><system-err>&#13;
-Expected: "Let Me Out (feat. Mavis Staples &amp; Pusha T)"&#13;
-     but: was null&#13;
-com.pineda.stepdefinitions.StepDefinitionGetSongDetailsById.el_cuerpo_de_la_respuesta_debe_contener_el_campo_name_con_el_valor(StepDefinitionGetSongDetailsById.java:30)&#13;
-</system-err></testcase></testsuite>

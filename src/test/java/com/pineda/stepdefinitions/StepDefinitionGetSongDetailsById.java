@@ -2,6 +2,7 @@ package com.pineda.stepdefinitions;
 
 import com.pineda.questions.LastResponseStatusCode;
 import com.pineda.questions.ResponseNameSong;
+import com.pineda.questions.ResponseTime;
 import com.pineda.tasks.GetSongRest;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,8 +25,12 @@ public class StepDefinitionGetSongDetailsById {
 
     @Then("el cuerpo de la respuesta debe contener el campo {string} con el valor {string}")
     public void el_cuerpo_de_la_respuesta_debe_contener_el_campo_name_con_el_valor(String fieldName, String expectedTitle) {
-        System.out.println(fieldName + " " + expectedTitle);
         theActorInTheSpotlight().should(seeThat("El nombre de la canción es" , ResponseNameSong.with(fieldName), equalTo(expectedTitle)));
+    }
+
+    @Then("el tiempo de respuesta debe ser menor a {long}ms")
+    public void el_tiempo_de_respuesta_debe_ser_menor_a_ms(long maxTime) {
+        theActorInTheSpotlight().should(seeThat("El tiempo de erspuesta es menor a "+maxTime+"ms" , ResponseTime.is(), lessThanOrEqualTo(maxTime)));
     }
 
 }

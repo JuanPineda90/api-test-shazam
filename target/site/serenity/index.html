@@ -221,7 +221,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-02-2025 00:17:49</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 21-02-2025 19:42:51</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -236,7 +236,7 @@
                         <td width="375px" valign="top">
                             <div class="test-count-summary">
                                 <div class="test-count-title">
-                                    8 tests
+                                    6 tests
 
                                     
 
@@ -306,33 +306,33 @@
                     <td>
                         <i class="bi bi-card-checklist"></i> Number of Scenarios
                     </td>
-                    <td>4</td>
+                    <td>3</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-caret-right"></i> Total Number of Test Cases
                     </td>
-                    <td>8</td>
+                    <td>6</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Feb 16, 2025 12:11:38</td>
+                    <td>Feb 21, 2025 19:42:09</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Feb 18, 2025 00:17:36</td>
+                    <td>Feb 21, 2025 19:42:25</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>1d  12h  5m 57s</td>
+                    <td>15s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -359,7 +359,7 @@
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>23s</td>
+                    <td>15s</td>
                 </tr>
                 </tbody>
             </table>
@@ -391,43 +391,10 @@
                                                                         <tbody>
                                                                                 <tr>
                                                                                     <td>
-                                                                                            <a href="9fdb6240189ccd2c9ae82c0411d9094f5e141a500bccaa771bb6763522660077.html"> Validar la respuesta al obtener detalles de canciones</a>
+                                                                                            <a href="f60f5a8c1ac0ac617d334f760a11f13155cae194b85dabfc74cc0fa5ca8487c8.html"> Validar la respuesta al obtener detalles de canciones</a>
                                                                                     </td>
-                                                                                    <td>4</td>
-                                                                                    <td>1: Get details of a song by existing ID ({id=1217912247})
-When a song is consulted "1217912247"
-Juan get song rest
-Juan with get
-Juan executes a GET on the resource /songs/v2/get-details
-GET https://shazam.p.rapidapi.com/songs/v2/get-details?id=1217912247
-Then I can see the song information
-Then The song name is should be 'Let Me Out (feat. Mavis Staples & Pusha T)'
-Then The response code is should be (200)
-2: Get details of a song by existing ID ({id=1217912248})
-When a song is consulted "1217912248"
-Juan get song rest
-Juan with get
-Juan executes a GET on the resource /songs/v2/get-details
-GET https://shazam.p.rapidapi.com/songs/v2/get-details?id=1217912248
-Then I can see the song information
-Then The song name is should be 'Let Me Out (feat. Mavis Staples & Pusha T)'
-1: Obtener detalles de una canción devuelve 200 OK ({songId=1217912247})
-When realizo una solicitud GET para obtener detalles de la canción con id "1217912247"
-Juan get song rest
-Juan with get
-Juan executes a GET on the resource /songs/v2/get-details
-GET https://shazam.p.rapidapi.com/songs/v2/get-details?id=1217912247
-Then el código de estado de la respuesta debe ser 200
-Then The song name is should be (200)
-2: Obtener detalles de una canción devuelve 200 OK ({songId=1217912248})
-When realizo una solicitud GET para obtener detalles de la canción con id "1217912248"
-Juan get song rest
-Juan with get
-Juan executes a GET on the resource /songs/v2/get-details
-GET https://shazam.p.rapidapi.com/songs/v2/get-details?id=1217912248
-Then el código de estado de la respuesta debe ser 200
-Then The song name is should be (200)
-1: Obtener detalles de una canción devuelve 200 OK ({songId=1217912247})
+                                                                                    <td>3</td>
+                                                                                    <td>1: Obtener detalles de una canción devuelve 200 OK ({songId=1217912247})
 When realizo una solicitud GET para obtener detalles de la canción con id "1217912247"
 Juan get song rest
 Juan with get
@@ -459,27 +426,35 @@ Juan executes a GET on the resource /songs/v2/get-details
 GET https://shazam.p.rapidapi.com/songs/v2/get-details?id=1217912248
 Then el cuerpo de la respuesta debe contener el campo "name" con el valor "Interlude: Penthouse"
 Then El nombre de la canci&oacute;n es should be 'Interlude: Penthouse'
+1: El tiempo de respuesta es menor a 2000ms ({songId=1217912247})
+When realizo una solicitud GET para obtener detalles de la canción con id "1217912247"
+Juan get song rest
+Juan with get
+Juan executes a GET on the resource /songs/v2/get-details
+GET https://shazam.p.rapidapi.com/songs/v2/get-details?id=1217912247
+Then el tiempo de respuesta debe ser menor a 2000ms
+Then El tiempo de erspuesta es menor a ms should be a value less than or equal to (2000L)
+2: El tiempo de respuesta es menor a 2000ms ({songId=1217912248})
+When realizo una solicitud GET para obtener detalles de la canción con id "1217912248"
+Juan get song rest
+Juan with get
+Juan executes a GET on the resource /songs/v2/get-details
+GET https://shazam.p.rapidapi.com/songs/v2/get-details?id=1217912248
+Then el tiempo de respuesta debe ser menor a 2000ms
+Then El tiempo de erspuesta es menor a ms should be a value less than or equal to (2000L)
 </td>
-                                                                                    <td>8</td>
-                                                                                    <td>88%</td>
+                                                                                    <td>6</td>
+                                                                                    <td>100%</td>
                                                                                     <td>
-                                                                                            <a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                                                                     </td>
                                                                                     <td>
                                                                                         <div class="progress">
                                                                                                 <div class="progress-bar"
                                                                                                      role="progressbar"
-                                                                                                     style="width: 87.5%; background-color: #b0cf73"
-                                                                                                     aria-valuenow="7"
-                                                                                                     title="88% success"
-                                                                                                     aria-valuemin="0"
-                                                                                                     aria-valuemax="100">
-                                                                                                </div>
-                                                                                                <div class="progress-bar"
-                                                                                                     role="progressbar"
-                                                                                                     style="width: 12.5%; background-color: #fd938e"
-                                                                                                     aria-valuenow="1"
-                                                                                                     title="13% failure"
+                                                                                                     style="width: 100%; background-color: #b0cf73"
+                                                                                                     aria-valuenow="6"
+                                                                                                     title="100% success"
                                                                                                      aria-valuemin="0"
                                                                                                      aria-valuemax="100">
                                                                                                 </div>
@@ -491,35 +466,6 @@ Then El nombre de la canci&oacute;n es should be 'Interlude: Penthouse'
                                                         </div>
                                                     </div>
 
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h3>Test Failure Overview</h3>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h4>Most Frequent Failures</h4>
-                                                            <table class="table" style="width:40vw;">
-                                                                <tbody>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <h4>Most Unstable Features</h4>
-                                                            <table class="table" style="width:40vw;">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="failure-color top-list-title">
-                                                                            <a href="9fdb6240189ccd2c9ae82c0411d9094f5e141a500bccaa771bb6763522660077.html">Get song details</a>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="badge failure-badge">50%</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
                                             </div>
                                             <div class="container-fluid">
                                             </div>
@@ -537,18 +483,18 @@ Then El nombre de la canci&oacute;n es should be 'Interlude: Penthouse'
                     <td>
                         <i class="bi bi-card-checklist"></i> Number of Scenarios
                     </td>
-                    <td>4</td>
+                    <td>3</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>1d  12h  5m 57s</td>
+                    <td>15s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-caret-right"></i> Total Number of Test Cases
                     </td>
-                    <td>8</td>
+                    <td>6</td>
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
@@ -569,7 +515,7 @@ Then El nombre de la canci&oacute;n es should be 'Interlude: Penthouse'
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Feb 16, 2025 12:11:38</td>
+                    <td>Feb 21, 2025 19:42:09</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
@@ -581,12 +527,12 @@ Then El nombre de la canci&oacute;n es should be 'Interlude: Penthouse'
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Feb 18, 2025 00:17:36</td>
+                    <td>Feb 21, 2025 19:42:25</td>
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>23s</td>
+                    <td>15s</td>
                 </tr>
                 </tbody>
             </table>
@@ -609,40 +555,14 @@ Then El nombre de la canci&oacute;n es should be 'Interlude: Penthouse'
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr class="scenario-result FAILURE">
-                                                                        <td>
-                                                                                <a href="9fdb6240189ccd2c9ae82c0411d9094f5e141a500bccaa771bb6763522660077.html">Get song details</a>
-                                                                        </td>
-                                                                        <td data-order="Get details of a song by existing ID">
-                                                                            <i class="bi bi-table"
-                                                                               title="Data Driven Scenario"> <a
-                                                                                        href="eb56c8c022d63deb8a177db616915f6bb53cf23e3448744f514a4e6fe1b32c39.html">Get details of a song by existing ID</a>
-                                                                                <br/>
-                                                                                    <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 1 passing test case
-                                                                                    <br/>
-                                                                                    <a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> 1 failing test case
-                                                                                    <br/>
-                                                                        </td>
-                                                                        <td><span style="display:none"></span>
-                                                                        </td>
-                                                                        <td>2</td>
-                                                                        <td>When a song is consulted &quot;&lt;id&gt;&quot;
-Then I can see the song information
-</td>
-                                                                        <td data-order="1739725898">12:11:38</td>
-                                                                        <td>6s 118ms</td>
-                                                                        <td><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> <span
-                                                                                    style="display:none">FAILURE</span>
-                                                                        </td>
-                                                                    </tr>
                                                                     <tr class="scenario-result SUCCESS">
                                                                         <td>
-                                                                                <a href="9fdb6240189ccd2c9ae82c0411d9094f5e141a500bccaa771bb6763522660077.html">Validar código de estado HTTP de obtener detalles de canciones</a>
+                                                                                <a href="f60f5a8c1ac0ac617d334f760a11f13155cae194b85dabfc74cc0fa5ca8487c8.html">Validar la respuesta al obtener detalles de canciones</a>
                                                                         </td>
                                                                         <td data-order="Obtener detalles de una canción devuelve 200 OK">
                                                                             <i class="bi bi-table"
                                                                                title="Data Driven Scenario"> <a
-                                                                                        href="4ac492b0eb7a50a77cc6368bbc64e958487cfb869fe17ed1a44c9f855c34253c.html">Obtener detalles de una canción devuelve 200 OK</a>
+                                                                                        href="21bbaaa00a575178a78ffe5f4d04e048185e2b55bff341a9c9a4e4eae0bc058d.html">Obtener detalles de una canción devuelve 200 OK</a>
                                                                                 <br/>
                                                                                     <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 2 passing test cases
                                                                                     <br/>
@@ -653,44 +573,20 @@ Then I can see the song information
                                                                         <td>When realizo una solicitud GET para obtener detalles de la canción con id &quot;&lt;songId&gt;&quot;
 Then el código de estado de la respuesta debe ser 200
 </td>
-                                                                        <td data-order="1739728943">13:02:23</td>
-                                                                        <td>4s 493ms</td>
+                                                                        <td data-order="1740184929">19:42:09</td>
+                                                                        <td>10s 527ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="scenario-result SUCCESS">
                                                                         <td>
-                                                                                <a href="9fdb6240189ccd2c9ae82c0411d9094f5e141a500bccaa771bb6763522660077.html">Validar la respuesta al obtener detalles de canciones</a>
-                                                                        </td>
-                                                                        <td data-order="Obtener detalles de una canción devuelve 200 OK">
-                                                                            <i class="bi bi-table"
-                                                                               title="Data Driven Scenario"> <a
-                                                                                        href="1ecb62267fa40f8107831f835b32d0f188ad5381f1034ce05979c0e2b0bd2f33.html">Obtener detalles de una canción devuelve 200 OK</a>
-                                                                                <br/>
-                                                                                    <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 2 passing test cases
-                                                                                    <br/>
-                                                                        </td>
-                                                                        <td><span style="display:none"></span>
-                                                                        </td>
-                                                                        <td>2</td>
-                                                                        <td>When realizo una solicitud GET para obtener detalles de la canción con id &quot;&lt;songId&gt;&quot;
-Then el código de estado de la respuesta debe ser 200
-</td>
-                                                                        <td data-order="1739855844">00:17:24</td>
-                                                                        <td>8s 536ms</td>
-                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                    style="display:none">SUCCESS</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr class="scenario-result SUCCESS">
-                                                                        <td>
-                                                                                <a href="9fdb6240189ccd2c9ae82c0411d9094f5e141a500bccaa771bb6763522660077.html">Validar la respuesta al obtener detalles de canciones</a>
+                                                                                <a href="f60f5a8c1ac0ac617d334f760a11f13155cae194b85dabfc74cc0fa5ca8487c8.html">Validar la respuesta al obtener detalles de canciones</a>
                                                                         </td>
                                                                         <td data-order="El cuerpo de la respuesta contiene los detalles esperados de la canción">
                                                                             <i class="bi bi-table"
                                                                                title="Data Driven Scenario"> <a
-                                                                                        href="e8e5079eae012a1ef5bbfed0ddb521d2f147791e7c77652146c993f718d232ba.html">El cuerpo de la respuesta contiene los detalles esperados de la canción</a>
+                                                                                        href="7e034973e98ff820d5331491f90395149ab297e9efeb376bb782c3cfd97809a9.html">El cuerpo de la respuesta contiene los detalles esperados de la canción</a>
                                                                                 <br/>
                                                                                     <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 2 passing test cases
                                                                                     <br/>
@@ -701,8 +597,32 @@ Then el código de estado de la respuesta debe ser 200
                                                                         <td>When realizo una solicitud GET para obtener detalles de la canción con id &quot;&lt;songId&gt;&quot;
 Then el cuerpo de la respuesta debe contener el campo &quot;name&quot; con el valor &quot;&lt;expectedTitle&gt;&quot;
 </td>
-                                                                        <td data-order="1739855852">00:17:32</td>
-                                                                        <td>4s 058ms</td>
+                                                                        <td data-order="1740184940">19:42:20</td>
+                                                                        <td>2s 867ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="f60f5a8c1ac0ac617d334f760a11f13155cae194b85dabfc74cc0fa5ca8487c8.html">Validar la respuesta al obtener detalles de canciones</a>
+                                                                        </td>
+                                                                        <td data-order="El tiempo de respuesta es menor a 2000ms">
+                                                                            <i class="bi bi-table"
+                                                                               title="Data Driven Scenario"> <a
+                                                                                        href="277e256881a636c80319acb605a8a030c24a1c65abfa22952d9781dc48fe6719.html">El tiempo de respuesta es menor a 2000ms</a>
+                                                                                <br/>
+                                                                                    <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> 2 passing test cases
+                                                                                    <br/>
+                                                                        </td>
+                                                                        <td><span style="display:none"></span>
+                                                                        </td>
+                                                                        <td>2</td>
+                                                                        <td>When realizo una solicitud GET para obtener detalles de la canción con id &quot;&lt;songId&gt;&quot;
+Then el tiempo de respuesta debe ser menor a 2000ms
+</td>
+                                                                        <td data-order="1740184943">19:42:23</td>
+                                                                        <td>2s 567ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -769,7 +689,7 @@ Then el cuerpo de la respuesta debe contener el campo &quot;name&quot; con el va
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [7,0,0,0,0,1,0,0],
+                data: [6,0,0,0,0,0,0,0],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -820,7 +740,7 @@ Then el cuerpo de la respuesta debe contener el campo &quot;name&quot; con el va
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = "88%"
+                        var text = "100%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -865,7 +785,7 @@ Then el cuerpo de la respuesta debe contener el campo &quot;name&quot; con el va
             datasets: [
                 {
                     label: 'Automated',
-                    data: [7,0,0,0,0,1,0,0],
+                    data: [6,0,0,0,0,0,0,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1
@@ -948,7 +868,7 @@ Then el cuerpo de la respuesta debe contener el campo &quot;name&quot; con el va
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','8','0','0','0','0','0','0'],
+                data: ['0','6','0','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
@@ -1012,8 +932,8 @@ Then el cuerpo de la respuesta debe contener el campo &quot;name&quot; con el va
         const coverageReports = [
             {
                 title: 'Validar la respuesta al obtener detalles de canciones',
-                result: 'FAILURE',
-                link: "9fdb6240189ccd2c9ae82c0411d9094f5e141a500bccaa771bb6763522660077.html"
+                result: 'SUCCESS',
+                link: "f60f5a8c1ac0ac617d334f760a11f13155cae194b85dabfc74cc0fa5ca8487c8.html"
             },
         ]
         const coverageData = {
@@ -1023,7 +943,7 @@ Then el cuerpo de la respuesta debe contener el campo &quot;name&quot; con el va
             datasets: [
                 {
                     label: ['Passing Tests'],
-                    data: [7],
+                    data: [6],
                     backgroundColor: [ 'rgba(153,204,51,0.5)' ]
                 },
                 {
@@ -1048,7 +968,7 @@ Then el cuerpo de la respuesta debe contener el campo &quot;name&quot; con el va
                 },
                 {
                     label: ['Failed Tests'],
-                    data: [1],
+                    data: [0],
                     backgroundColor: [ 'rgba(255, 22, 49, 0.5)' ]
                 },
                 {

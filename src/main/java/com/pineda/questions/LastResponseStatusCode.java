@@ -4,8 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
 import static net.serenitybdd.rest.SerenityRest.lastResponse;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
 
 public class LastResponseStatusCode implements Question<Integer> {
 

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Get song details" skipped="0" tests="2" time="6.12" timestamp="2025-02-16 12:11:38"><testcase name="Get details of a song by existing ID"><failure message="&#13;&#10;Expected: &quot;Let Me Out (feat. Mavis Staples &amp; Pusha T)&quot;&#13;&#10;     but: was &quot;Interlude: Penthouse&quot;" type="java.lang.AssertionError">&#13;
-Expected: "Let Me Out (feat. Mavis Staples &amp; Pusha T)"&#13;
-     but: was "Interlude: Penthouse"</failure><system-err>&#13;
-Expected: "Let Me Out (feat. Mavis Staples &amp; Pusha T)"&#13;
-     but: was "Interlude: Penthouse"&#13;
-com.pineda.stepdefinitions.StepDefinitionGetSongDetailsById.i_can_see_the_song_information(StepDefinitionGetSongDetailsById.java:26)&#13;
-</system-err></testcase></testsuite>
